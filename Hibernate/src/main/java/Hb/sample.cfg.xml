@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+        <property name="hibernate.connection.username">hiber</property>
+        <property name="hibernate.connection.password">hiber</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <mapping resource="Hb/sample.hbm.xml" /> 
+        <mapping class="Hb.library"/>
+        <mapping class="Hb.Customer"/>
+        <mapping class="Hb.CTransaction"/> 
+        <mapping class="Hb.Student_info"/>
+        <mapping class="Hb.Address"/>
+        <mapping class="Hb.Teacher"/>
+        <mapping class="Hb.Subject"/>
+        <mapping class="Hb.Question"/>
+        <mapping class="Hb.Answer"/>
+    </session-factory>
+</hibernate-configuration>
